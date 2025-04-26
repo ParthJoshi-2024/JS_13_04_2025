@@ -1,1 +1,1 @@
-
+Very Basic JS Projects - for the unpaid-training purposes

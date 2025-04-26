@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Switching</title>
+    <style>
+        body{
+            background-color: lightgrey;
+        }
+    </style>
+   
+</head>
+<body>
+    <div>
+        <h1>Color Changing Game</h1>
+        <button class="button" id="grey">Grey Button</button>
+        <button class="button" id="yellow">Yellow Button</button>
+        <button class="button" id="purple">Purple Button</button>
+        <button class="button" id="orange">Orange Button</button>
+        <button class="button" id="reset">Reset Button</button>
+    </div>
+    
+</body>
+<script>
+    const colorElements = document.querySelectorAll('.button');
+    const body = document.querySelector('body');
+    console.log('colorElements is', colorElements)
+    colorElements.forEach(element => {
+        element.addEventListener('click', function(e) {
+            console.log('clicked')
+            if(e.target.id == 'grey') {
+                body.style.backgroundColor = 'brown';
+            } else if(e.target.id == 'yellow'){
+                body.style.backgroundColor = 'red';
+            } else if(e.target.id === 'purple'){
+                body.style.backgroundColor = 'pink';
+            } else if(e.target.id == 'orange') {
+                body.style.backgroundColor = 'green';
+            } else {
+                alert('Reset Done!!!')
+                body.style.backgroundColor = 'white';
+            }
+        })
+    });
+</script>
+</html>
